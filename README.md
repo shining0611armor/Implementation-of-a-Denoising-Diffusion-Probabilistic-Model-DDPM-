@@ -26,6 +26,7 @@ Diffusion models have emerged as a prominent class of generative models, offerin
 - [Forward Process](#forward-process)
 - [Backward Process](#backward-process)
 - [Results and Metrics](#results-and-metrics)
+- [Required Files](#what we provided and how can we use?)
 - [Required Files](#required-files)
 
 ## 🔍 What is the Diffusion Model?
@@ -56,7 +57,7 @@ Training diffusion models involves two main objectives:
 The loss function used during training typically measures the discrepancy between the predicted noise and the actual noise added during the forward process. By minimizing this loss, the model learns an accurate denoising function.
 
 ## 🛠 Preprocessing of Datasets
-In this article, we use two datasets: the MNIST dataset and the Persian digit dataset.
+In this article, we use two datasets: the MNIST dataset and the Persian digit and latters dataset.
 
 ![dataloaders and transformations](https://github.com/shining0611armor/Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-/raw/main/images/screenshot016.png)
 
@@ -66,9 +67,6 @@ We can simply show samples of images first from the MNIST dataset.
 
 For the second dataset, we need to prepare it and also create a custom dataset for torch data loaders.
 
-![importing second dataset](https://github.com/shining0611armor/Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-/raw/main/images/screenshot021.png)
-
-![creating custom dataset and shuffling](https://github.com/shining0611armor/Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-/raw/main/images/screenshot022.png)
 
 Now we can see some samples of the second dataset.
 
