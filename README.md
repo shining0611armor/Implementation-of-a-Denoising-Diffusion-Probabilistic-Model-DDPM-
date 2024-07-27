@@ -110,6 +110,7 @@ For the backward process, the model operates as a Gaussian distribution. The goa
 ### Backward Process Explanation
 In the backward process, the objective is to revert to a less noisy image $x$ at timestep $t-1$ using a Gaussian distribution whose mean is predicted by the model. finally the model has to compute  $\epsilon_\theta$ ,the noise predicted by the model.
 
+![image](https://github.com/user-attachments/assets/dc18070b-3302-49eb-bd6a-d5de00b41da9)
 
 
 
