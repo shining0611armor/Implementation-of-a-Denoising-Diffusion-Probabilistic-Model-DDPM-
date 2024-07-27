@@ -37,12 +37,12 @@ The core idea behind diffusion models is the concept of a diffusion process. Thi
 ### 🔗 Markov Chain and Noise Addition
 In a diffusion model, the Markov chain is defined such that at each step, a small amount of Gaussian noise is added to the data. This can be represented as:
 $`\displaystyle x_{t+1} = x_t + \sqrt{\beta_t} \cdot \epsilon`$
-where \( x_t \) is the data at step \( t \), \( \beta_t \) is a noise coefficient, and \( \epsilon \) is Gaussian noise. Over a large number of steps, this process transforms the original data into pure noise.
+where $\( x_t \)$ is the data at step $\( t \)$, $\( \beta_t \)$ is a noise coefficient, and $\( \epsilon \)$ is Gaussian noise. Over a large number of steps, this process transforms the original data into pure noise.
 
 ### 🧠 Learning the Reverse Process
 The innovative aspect of diffusion models is their ability to learn the reverse diffusion process. The goal is to train a neural network to reverse the noise addition steps, effectively denoising the data step-by-step to reconstruct the original data from noise. This reverse process is also a Markov chain, but it involves subtracting the learned noise at each step:
 $`\displaystyle x_{t-1} = x_t - \sqrt{\beta_t} \cdot \epsilon_\theta(x_t, t)`$
-where \( \epsilon_\theta \) is the learned noise predictor, typically parameterized by a neural network.
+where $\( \epsilon_\theta \)$ is the learned noise predictor, typically parameterized by a neural network.
 
 ### 🖼 High Dimensionality of Latent Variables
 Unlike VAEs or flow models, where the latent space is often of lower dimensionality than the data space, diffusion models maintain a high-dimensional latent space that is equal to the original data space. This characteristic is crucial as it ensures that the generative process does not lose information and can produce highly detailed and accurate samples.
@@ -96,7 +96,7 @@ where:
 - $\(\mathbf{x}_t\)$ is the data at timestep $\( t \)$.
 - $\(\mathbf{x}_{t-1}\)$ is the data at the previous timestep $\( t-1 \)$.
 - $\(\sqrt{1 - \beta_t}\)$ is the scaling factor applied to $\(\mathbf{x}_{t-1}\)$.
-- $\(\beta_t \mathbf{I}\)$ is the variance, where $\(\mathbf{I}\)'$ is the identity matrix.
+- $\(\beta_t \mathbf{I}\)$ is the variance, where $\(\mathbf{I}\)$ is the identity matrix.
 
 ## 🏃 Backward Process
 For the backward process, the model operates as a Gaussian distribution. The goal is to predict the distribution mean and standard deviation given the noisy image and the time step. In the initial paper on DDPMs, the covariance matrix is kept fixed, so the focus is on predicting the mean of the Gaussian distribution based on the noisy image and the current time step.
@@ -104,7 +104,7 @@ For the backward process, the model operates as a Gaussian distribution. The goa
 ### Backward Process Explanation
 In the backward process, the objective is to revert to a less noisy image \( x \) at timestep \( t-1 \) using a Gaussian distribution whose mean is predicted by the model. The optimal mean value to be predicted is a function of known terms:
 $`\displaystyle \mu_\theta(x_t, t) = \frac{1}{\sqrt{\alpha_t}} \left( x_t - \frac{\beta_t}{\sqrt{1 - \bar{\alpha}_t}} \epsilon_\theta(x_t, t) \right)`$
-Where \(\mu_\theta\) is the predicted mean, \( x_t \) is the noisy image at time step \( t \), \(\alpha_t\) and \(\beta_t\) are constants derived from the forward process, \(\bar{\alpha}_t\) is the cumulative product of \(\alpha_t\) up to time step \( t \), and \(\epsilon_\theta\) is the noise predicted by the model.
+Where $\(\mu_\theta\)$ is the predicted mean, $\( x_t \)$ is the noisy image at time step $\( t \)$, $\(\alpha_t\)$ and $\(\beta_t\)$ are constants derived from the forward process, $\(\bar{\alpha}_t\)$ is the cumulative product of $\(\alpha_t\)$ up to time step $\( t \)$, and $\(\epsilon_\theta\)$ is the noise predicted by the model.
 
 ### Loss Function
 The loss function is a scaled version of the Mean-Square Error (MSE) between the real noise added to the images and the noise predicted by the model:
