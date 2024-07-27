@@ -1,6 +1,6 @@
 # Project Title
 
-![Project Banner](https://via.placeholder.com/800x200.png?text=Project+Banner)
+![A simple Implementing of denoising diffusion model ](https://via.placeholder.com/800x200.png?text=Project+Banner)
 
 ## Quick Access in Colab
 
