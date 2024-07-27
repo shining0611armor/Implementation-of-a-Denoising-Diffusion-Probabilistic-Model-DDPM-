@@ -92,11 +92,11 @@ The transition distribution is defined as follows:
 $`\displaystyle q_\phi(\mathbf{x}_t | \mathbf{x}_{t-1}) \overset{{def}}{=} \mathcal{N}(\mathbf{x}_t | \sqrt{1 - \beta_t} \mathbf{x}_{t-1}, \beta_t \mathbf{I})`$
 
 where:
-- \(\mathcal{N}\) denotes the normal (Gaussian) distribution.
-- \(\mathbf{x}_t\) is the data at timestep \( t \).
-- \(\mathbf{x}_{t-1}\) is the data at the previous timestep \( t-1 \).
-- \(\sqrt{1 - \beta_t}\) is the scaling factor applied to \(\mathbf{x}_{t-1}\).
-- \(\beta_t \mathbf{I}\) is the variance, where \(\mathbf{I}\) is the identity matrix.
+- $'\(\mathcal{N}\)'$ denotes the normal (Gaussian) distribution.
+- $'\(\mathbf{x}_t\)'$ is the data at timestep $'\( t \)'$.
+- $'\(\mathbf{x}_{t-1}\)'$ is the data at the previous timestep $'\( t-1 \)'$.
+- $'\(\sqrt{1 - \beta_t}\)'$ is the scaling factor applied to $'\(\mathbf{x}_{t-1}\)'$.
+- $'\(\beta_t \mathbf{I}\)'$ is the variance, where $'\(\mathbf{I}\)'$ is the identity matrix.
 
 ## 🏃 Backward Process
 For the backward process, the model operates as a Gaussian distribution. The goal is to predict the distribution mean and standard deviation given the noisy image and the time step. In the initial paper on DDPMs, the covariance matrix is kept fixed, so the focus is on predicting the mean of the Gaussian distribution based on the noisy image and the current time step.
