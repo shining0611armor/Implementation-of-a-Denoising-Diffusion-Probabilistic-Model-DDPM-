@@ -1,6 +1,6 @@
 # Project Title
 
-![A simple Implementing of denoising diffusion model ](https://via.placeholder.com/800x200.png?text=Project+Banner)
+![A simple Implementing of denoising diffusion model ]([https://via.placeholder.com/800x200](https://github.com/shining0611armor/Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-/images/poster.png)
 
 ## Quick Access in Colab
 
