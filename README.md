@@ -83,7 +83,7 @@ $`\displaystyle q(\mathbf{x}_{1:T} | \mathbf{x}_0) = \prod_{t=1}^{T} q(\mathbf{x
 where
 $`\displaystyle q(\mathbf{x}_t | \mathbf{x}_{t-1}) = \mathcal{N}(\mathbf{x}_t | \sqrt{1 - \beta_t} \mathbf{x}_{t-1}, \beta_t \mathbf{I})`$
 
-### Transition Distribution $\(q_\phi(\mathbf{x}_t | \mathbf{x}_{t-1})\)$
+### Transition Distribution
 In a denoising diffusion probabilistic model (DDPM), the transition distribution \( q_\phi(\mathbf{x}_t | \mathbf{x}_{t-1}) \) describes how the data transitions from one timestep to the next in the forward diffusion process. This transition adds a small amount of Gaussian noise to the data at each step, ensuring that the data becomes progressively noisier.
 
 The transition distribution is defined as follows:
@@ -102,9 +102,9 @@ For the backward process, the model operates as a Gaussian distribution. The goa
 modify this ### Backward Process Explanation
 In the backward process, the objective is to revert to a less noisy image \( x \) at timestep \( t-1 \) using a Gaussian distribution whose mean is predicted by the model. The optimal mean value to be predicted is a function of known terms:
 
-$\(
-\mu_\theta(x_t, t) = \frac{1}{\sqrt{\alpha_t}} \left( x_t - \frac{\beta_t}{\sqrt{1 - \bar{\alpha}_t}} \epsilon_\theta(x_t, t) \right)
-\)#
+
+$$\mu_\theta(x_t, t) = \frac{1}{\sqrt{\alpha_t}} \left( x_t - \frac{\beta_t}{\sqrt{1 - \bar{\alpha}_t}} \epsilon_\theta(x_t, t) \right)$$
+
 
 where \(\mu_\theta\) is the predicted mean, \( x_t \) is the noisy image at time step \( t \), \(\alpha_t\) and \(\beta_t\) are constants derived from the forward process, \(\bar{\alpha}_t\) is the cumulative product of \(\alpha_t\) up to time step \( t \), and \(\epsilon_\theta\) is the noise predicted by the model.
 
