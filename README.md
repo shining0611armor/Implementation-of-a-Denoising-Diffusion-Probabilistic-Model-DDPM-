@@ -101,10 +101,13 @@ For the backward process, the model operates as a Gaussian distribution. The goa
 
 ### Backward Process Explanation
 In the backward process, the objective is to revert to a less noisy image \( x \) at timestep \( t-1 \) using a Gaussian distribution whose mean is predicted by the model. The optimal mean value to be predicted is a function of known terms:
+
 $$
 \mu_\theta(x_t, t) = \frac{1}{\sqrt{\alpha_t}} \left( x_t - \frac{\beta_t}{\sqrt{1 - \bar{\alpha}_t}} \epsilon_\theta(x_t, t) \right)
 $$
+
 where \(\mu_\theta\) is the predicted mean, \( x_t \) is the noisy image at time step \( t \), \(\alpha_t\) and \(\beta_t\) are constants derived from the forward process, \(\bar{\alpha}_t\) is the cumulative product of \(\alpha_t\) up to time step \( t \), and \(\epsilon_\theta\) is the noise predicted by the model.
+
 
 ### Loss Function
 The loss function is a scaled version of the Mean-Square Error (MSE) between the real noise added to the images and the noise predicted by the model:
