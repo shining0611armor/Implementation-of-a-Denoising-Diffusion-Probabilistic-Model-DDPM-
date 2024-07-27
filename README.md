@@ -1,4 +1,4 @@
-# A simple Implementing of denoising diffusion model
+# A simple Implementing of Denoising Diffusion Probabilistic Model (DDPM)
 
 ![A simple Implementing of denoising diffusion model](https://github.com/shining0611armor/Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-/raw/main/images/poster.PNG)
 
