@@ -121,7 +121,7 @@ $`\displaystyle L(\theta) = \mathbb{E}_{t, x_0, \epsilon} \left[ \| \epsilon - \
 
 ## 📊 Results and Metrics
 Here we provide results for both the MNIST and Persian digit datasets.
-
+here we can see train and validation loss curves and loss curves for validation and train sets during training for each dataset.
 ### MNIST Dataset
 ![train and validation loss curves](https://github.com/shining0611armor/Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-/raw/main/images/screenshot009.png)
 
@@ -132,7 +132,6 @@ Here we provide results for both the MNIST and Persian digit datasets.
 
 ![generated images for the second dataset](https://github.com/shining0611armor/Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-/raw/main/images/screenshot012.png)
 
-![gif generated for the second dataset](https://github.com/shining0611armor/Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-/raw/main/images/screenshot013.png)
 
 ## 🗂 Required Files
 The implementation requires the following files:
