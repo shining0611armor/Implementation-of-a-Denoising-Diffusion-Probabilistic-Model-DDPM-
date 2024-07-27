@@ -132,6 +132,7 @@ here we can see train and validation loss curves and loss curves for validation 
 
 <img src="https://github.com/shining0611armor/Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-/raw/main/images/screenshot012.png" alt="generated images for the second dataset" width="400">
 
+## what we provided and how can we use?
 
 
 ## 🗂 Required Files
