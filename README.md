@@ -15,6 +15,8 @@ For MNIST dataset :
 For Persian digits and letters  dataset :
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/shining0611armor/Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-/blob/main/persian_run.ipynb)
+
+
 ## 📜 Abstract
 Diffusion models have emerged as a prominent class of generative models, offering a unique and effective approach to data generation. Unlike traditional models such as Variational Autoencoders (VAEs) and flow models, diffusion models utilize a Markov chain of diffusion steps to gradually introduce random noise to data. This process is subsequently reversed through learned noise reduction steps to reconstruct the original data from pure noise, ensuring high-dimensional latent variables that preserve data integrity. In this repository, we delve into the theoretical underpinnings of diffusion models, elucidating the forward and reverse diffusion processes. We provide a comprehensive implementation of diffusion models and demonstrate their application on two datasets: the widely recognized MNIST dataset and the Persian digit dataset. Through detailed experiments and analysis, we illustrate the efficacy of diffusion models in generating high-quality data samples, highlighting their potential in various machine learning and data science applications. Our step-by-step guide offers a practical framework for implementing diffusion models, making this powerful generative approach accessible to researchers and practitioners alike.
 
@@ -34,12 +36,12 @@ The core idea behind diffusion models is the concept of a diffusion process. Thi
 
 ### 🔗 Markov Chain and Noise Addition
 In a diffusion model, the Markov chain is defined such that at each step, a small amount of Gaussian noise is added to the data. This can be represented as:
-\[ x_{t+1} = x_t + \sqrt{\beta_t} \cdot \epsilon \]
+$`\displaystyle x_{t+1} = x_t + \sqrt{\beta_t} \cdot \epsilon`$
 where \( x_t \) is the data at step \( t \), \( \beta_t \) is a noise coefficient, and \( \epsilon \) is Gaussian noise. Over a large number of steps, this process transforms the original data into pure noise.
 
 ### 🧠 Learning the Reverse Process
 The innovative aspect of diffusion models is their ability to learn the reverse diffusion process. The goal is to train a neural network to reverse the noise addition steps, effectively denoising the data step-by-step to reconstruct the original data from noise. This reverse process is also a Markov chain, but it involves subtracting the learned noise at each step:
-\[ x_{t-1} = x_t - \sqrt{\beta_t} \cdot \epsilon_\theta(x_t, t) \]
+$`\displaystyle x_{t-1} = x_t - \sqrt{\beta_t} \cdot \epsilon_\theta(x_t, t)`$
 where \( \epsilon_\theta \) is the learned noise predictor, typically parameterized by a neural network.
 
 ### 🖼 High Dimensionality of Latent Variables
@@ -79,15 +81,15 @@ In the forward process, Gaussian noise is added to the data over several timeste
 We can name the noisy images as latent variables and the pure image as the observation. In this case, each noisy step only depends upon the previous steps, hence it can make a Markov chain.
 
 The forward diffusion process is defined as:
-\[ q(\mathbf{x}_{1:T} | \mathbf{x}_0) = \prod_{t=1}^{T} q(\mathbf{x}_t | \mathbf{x}_{t-1}) \]
+$`\displaystyle q(\mathbf{x}_{1:T} | \mathbf{x}_0) = \prod_{t=1}^{T} q(\mathbf{x}_t | \mathbf{x}_{t-1})`$
 where
-\[ q(\mathbf{x}_t | \mathbf{x}_{t-1}) = \mathcal{N}(\mathbf{x}_t | \sqrt{1 - \beta_t} \mathbf{x}_{t-1}, \beta_t \mathbf{I}) \]
+$`\displaystyle q(\mathbf{x}_t | \mathbf{x}_{t-1}) = \mathcal{N}(\mathbf{x}_t | \sqrt{1 - \beta_t} \mathbf{x}_{t-1}, \beta_t \mathbf{I})`$
 
 ### Transition Distribution \( q_\phi(\mathbf{x}_t | \mathbf{x}_{t-1}) \)
 In a denoising diffusion probabilistic model (DDPM), the transition distribution \( q_\phi(\mathbf{x}_t | \mathbf{x}_{t-1}) \) describes how the data transitions from one timestep to the next in the forward diffusion process. This transition adds a small amount of Gaussian noise to the data at each step, ensuring that the data becomes progressively noisier.
 
 The transition distribution is defined as follows:
-\[ q_\phi(\mathbf{x}_t | \mathbf{x}_{t-1}) \overset{{def}}{=} \mathcal{N}(\mathbf{x}_t | \sqrt{1 - \beta_t} \mathbf{x}_{t-1}, \beta_t \mathbf{I}) \]
+$`\displaystyle q_\phi(\mathbf{x}_t | \mathbf{x}_{t-1}) \overset{{def}}{=} \mathcal{N}(\mathbf{x}_t | \sqrt{1 - \beta_t} \mathbf{x}_{t-1}, \beta_t \mathbf{I})`$
 
 where:
 - \(\mathcal{N}\) denotes the normal (Gaussian) distribution.
@@ -101,12 +103,12 @@ For the backward process, the model operates as a Gaussian distribution. The goa
 
 ### Backward Process Explanation
 In the backward process, the objective is to revert to a less noisy image \( x \) at timestep \( t-1 \) using a Gaussian distribution whose mean is predicted by the model. The optimal mean value to be predicted is a function of known terms:
-\[ \mu_\theta(x_t, t) = \frac{1}{\sqrt{\alpha_t}} \left( x_t - \frac{\beta_t}{\sqrt{1 - \bar{\alpha}_t}} \epsilon_\theta(x_t, t) \right) \]
+$`\displaystyle \mu_\theta(x_t, t) = \frac{1}{\sqrt{\alpha_t}} \left( x_t - \frac{\beta_t}{\sqrt{1 - \bar{\alpha}_t}} \epsilon_\theta(x_t, t) \right)`$
 Where \(\mu_\theta\) is the predicted mean, \( x_t \) is the noisy image at time step \( t \), \(\alpha_t\) and \(\beta_t\) are constants derived from the forward process, \(\bar{\alpha}_t\) is the cumulative product of \(\alpha_t\) up to time step \( t \), and \(\epsilon_\theta\) is the noise predicted by the model.
 
 ### Loss Function
 The loss function is a scaled version of the Mean-Square Error (MSE) between the real noise added to the images and the noise predicted by the model:
-\[ L(\theta) = \mathbb{E}_{t, x_0, \epsilon} \left[ \| \epsilon - \epsilon_\theta(x_t, t) \|^2 \right] \]
+$`\displaystyle L(\theta) = \mathbb{E}_{t, x_0, \epsilon} \left[ \| \epsilon - \epsilon_\theta(x_t, t) \|^2 \right]`$
 
 ## 📊 Results and Metrics
 Here we provide results for both the MNIST and Persian digit datasets.
