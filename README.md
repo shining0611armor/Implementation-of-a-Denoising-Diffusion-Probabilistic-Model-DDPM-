@@ -90,7 +90,7 @@ $`\displaystyle q(\mathbf{x}_t | \mathbf{x}_{t-1}) = \mathcal{N}(\mathbf{x}_t | 
 
 
 ### Transition Distribution
-In a denoising diffusion probabilistic model (DDPM), the transition distribution #q_\phi(\mathbf{x}_t | \mathbf{x}_{t-1})# describes how the data transitions from one timestep to the next in the forward diffusion process. This transition adds a small amount of Gaussian noise to the data at each step, ensuring that the data becomes progressively noisier.
+In a denoising diffusion probabilistic model (DDPM), the transition distribution  describes how the data transitions from one timestep to the next in the forward diffusion process. This transition adds a small amount of Gaussian noise to the data at each step, ensuring that the data becomes progressively noisier.
 
 The transition distribution is defined as follows:
 $`\displaystyle q_\phi(\mathbf{x}_t | \mathbf{x}_{t-1}) \overset{{def}}{=} \mathcal{N}(\mathbf{x}_t | \sqrt{1 - \beta_t} \mathbf{x}_{t-1}, \beta_t \mathbf{I})`$
