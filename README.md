@@ -59,18 +59,19 @@ The loss function used during training typically measures the discrepancy betwee
 ## 🛠 Preprocessing of Datasets
 In this article, we use two datasets: the MNIST dataset and the Persian digit and latters dataset.
 
-![dataloaders and transformations](https://github.com/shining0611armor/Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-/raw/main/images/screenshot016.png)
 
 We can simply show samples of images first from the MNIST dataset.
+![Samples of trainset  for the first dataset](https://github.com/shining0611armor/Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-/raw/main/images/screenshot019.png)
 
-![Samples of trainset and testset for the first dataset](https://github.com/shining0611armor/Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-/raw/main/images/screenshot020.png)
+![Samples of  testset for the first dataset](https://github.com/shining0611armor/Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-/raw/main/images/screenshot020.png)
 
 For the second dataset, we need to prepare it and also create a custom dataset for torch data loaders.
 
 
 Now we can see some samples of the second dataset.
+![Samples of trainset for the second dataset](https://github.com/shining0611armor/Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-/raw/main/images/screenshot017.png)
 
-![Samples of trainset and testset for the second dataset](https://github.com/shining0611armor/Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-/raw/main/images/screenshot018.png)
+![Samples of  testset for the second dataset](https://github.com/shining0611armor/Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-/raw/main/images/screenshot018.png)
 
 ## 📉 Forward Process
 ### Mathematical Proof for Diffusion Model Components
