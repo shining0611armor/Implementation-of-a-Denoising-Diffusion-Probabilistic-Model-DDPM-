@@ -84,9 +84,6 @@ $`\displaystyle q(\mathbf{x}_{1:T} | \mathbf{x}_0) = \prod_{t=1}^{T} q(\mathbf{x
 where
 $`\displaystyle q(\mathbf{x}_t | \mathbf{x}_{t-1}) = \mathcal{N}(\mathbf{x}_t | \sqrt{1 - \beta_t} \mathbf{x}_{t-1}, \beta_t \mathbf{I})`$
 
-![forward path for the first dataset](https://github.com/shining0611armor/Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-/raw/main/images/screenshot001.png)
-
-![forward path for the second dataset](https://github.com/shining0611armor/Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-/raw/main/images/screenshot010.png)
 
 
 ### Transition Distribution
@@ -101,6 +98,10 @@ where:
 - $\(\mathbf{x}_{t-1}\)$ is the data at the previous timestep $\( t-1 \)$.
 - $\(\sqrt{1 - \beta_t}\)$ is the scaling factor applied to $\(\mathbf{x}_{t-1}\)$.
 - $\(\beta_t \mathbf{I}\)$ is the variance, where $\(\mathbf{I}\)$ is the identity matrix.
+
+![forward path for the first dataset](https://github.com/shining0611armor/Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-/raw/main/images/screenshot001.png)
+
+![forward path for the second dataset](https://github.com/shining0611armor/Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-/raw/main/images/screenshot010.png)
 
 ## 🏃 Backward Process
 For the backward process, the model operates as a Gaussian distribution. The goal is to predict the distribution mean and standard deviation given the noisy image and the time step. In the initial paper on DDPMs, the covariance matrix is kept fixed, so the focus is on predicting the mean of the Gaussian distribution based on the noisy image and the current time step.
