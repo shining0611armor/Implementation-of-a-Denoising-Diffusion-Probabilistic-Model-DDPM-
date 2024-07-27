@@ -26,8 +26,8 @@ Diffusion models have emerged as a prominent class of generative models, offerin
 - [Forward Process](#forward-process)
 - [Backward Process](#backward-process)
 - [Results and Metrics](#results-and-metrics)
-- [Required Files](#what we provided and how can we use?)
 - [Required Files](#required-files)
+- [Usage](#usage)
 
 ## 🔍 What is the Diffusion Model?
 Diffusion models have emerged as a powerful class of generative models that are gaining popularity in various fields, particularly in machine learning and data science. Unlike traditional generative models like Variational Autoencoders (VAEs) and flow models, diffusion models operate on a fundamentally different principle. They leverage a Markov chain of diffusion steps to gradually add random noise to the data, and then learn to reverse this process to generate desired data samples from pure noise. This approach not only provides a novel mechanism for data generation but also ensures high-dimensional latent variables, making the model's output closely resemble the original data.
@@ -132,8 +132,6 @@ here we can see train and validation loss curves and loss curves for validation 
 
 <img src="https://github.com/shining0611armor/Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-/raw/main/images/screenshot012.png" alt="generated images for the second dataset" width="400">
 
-## what we provided and how can we use?
-
 
 ## 🗂 Required Files
 The implementation requires the following files:
@@ -143,3 +141,25 @@ The implementation requires the following files:
 - `diffusion_model.py`
 - `unet.py`
 - `requirements.txt`
+
+
+## 🛠 Usage
+To use this implementation, follow these steps:
+
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/shining0611armor/Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-.git
+    cd Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-
+    ```
+
+2. **Install the required packages**:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. **Run the main script**:
+    ```bash
+    python main.py
+    ```
+
+This will start the training process and generate samples from the diffusion model.
