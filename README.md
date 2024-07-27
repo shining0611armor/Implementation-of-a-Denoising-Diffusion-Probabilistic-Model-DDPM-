@@ -15,5 +15,5 @@ For MNIST dataset :
 
 For Persian digits and letters  dataset :
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/githubshining0611armor/Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-/blob/main/Mnist_run.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/githubshining0611armor/Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-/blob/main/persian_run.ipynb)
 
