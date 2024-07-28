@@ -158,6 +158,13 @@ This will start the training process and generate samples from the diffusion mod
 
 You can read the helper PDF file to better understand the concepts. Use the quick start on Google Colab and change the runtime to a T4 GPU resource.
 
+There are also other resources you may find helpful for better understanding. To understand the complete mathematical concepts behind DDPM, I suggest reading the article "Tutorial on Diffusion Models for Imaging and Vision".
+
+## References & Resources
+- [CVPR 2022 Tutorial on Diffusion Models](https://cvpr2022-tutorial-diffusion-models.github.io/)
+- Stanley Chan, "Tutorial on Diffusion Models for Imaging and Vision", 2024.
+- [Denoising Diffusion Probabilistic Models Paper](https://arxiv.org/abs/2006.11239)
+
 ## 📫 Contact
 Feel free to reach out if you have any questions or suggestions:
 - **Email**: mehrant.0611@gmail.com
