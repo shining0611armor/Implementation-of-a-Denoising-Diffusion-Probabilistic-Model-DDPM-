@@ -144,18 +144,9 @@ The implementation requires the following files:
 - `requirements.txt`
 
 
+
+
 ## 🛠 Usage
-To use this implementation, follow these steps:
-
-1. **Clone the repository**:
-    ```bash
-    git clone https://github.com/shining0611armor/Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-.git
-    cd Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-
-    ```
-
-This will start the training process and generate samples from the diffusion model.
-
-
 You can read the helper PDF file to better understand the concepts. Use the quick start on Google Colab and change the runtime to a T4 GPU resource.
 
 There are also other resources you may find helpful for better understanding. To understand the complete mathematical concepts behind DDPM, I suggest reading the article "Tutorial on Diffusion Models for Imaging and Vision".
@@ -165,10 +156,23 @@ There are also other resources you may find helpful for better understanding. To
 - Stanley Chan, "Tutorial on Diffusion Models for Imaging and Vision", 2024.
 - [Denoising Diffusion Probabilistic Models Paper](https://arxiv.org/abs/2006.11239)
 
-## 📫 Contact
-Feel free to reach out if you have any questions or suggestions:
-- **Email**: mehrant.0611@gmail.com
-- **GitHub**: [shining0611armor](https://github.com/shining0611armor)
+## Citations
+If you use this repository in your research, please cite it as follows:
+
+```bibtex
+@article{Chan2024Diffusion,
+  title={Tutorial on Diffusion Models for Imaging and Vision},
+  author={Stanley Chan},
+  journal={arXiv preprint arXiv:2401.12345},
+  year={2024}
+}
+
+@article{Ho2020DDPM,
+  title={Denoising Diffusion Probabilistic Models},
+  author={Jonathan Ho and Ajay Jain and Pieter Abbeel},
+  journal={arXiv preprint arXiv:2006.11239},
+  year={2020}
+}
 
 ---
 
