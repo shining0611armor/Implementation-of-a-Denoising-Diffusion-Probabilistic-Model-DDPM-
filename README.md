@@ -28,6 +28,7 @@ Diffusion models have emerged as a prominent class of generative models, offerin
 - [Results and Metrics](#results-and-metrics)
 - [Required Files](#required-files)
 - [Usage](#usage)
+- [Contact](#Contact)
 
 ## 🔍 What is the Diffusion Model?
 Diffusion models have emerged as a powerful class of generative models that are gaining popularity in various fields, particularly in machine learning and data science. Unlike traditional generative models like Variational Autoencoders (VAEs) and flow models, diffusion models operate on a fundamentally different principle. They leverage a Markov chain of diffusion steps to gradually add random noise to the data, and then learn to reverse this process to generate desired data samples from pure noise. This approach not only provides a novel mechanism for data generation but also ensures high-dimensional latent variables, making the model's output closely resemble the original data.
@@ -156,3 +157,13 @@ This will start the training process and generate samples from the diffusion mod
 
 
 You can read the helper PDF file to better understand the concepts. Use the quick start on Google Colab and change the runtime to a T4 GPU resource.
+
+## 📫 Contact
+Feel free to reach out if you have any questions or suggestions:
+- **Email**: mehrant.0611@gmail.com
+- **GitHub**: [shining0611armor](https://github.com/shining0611armor)
+
+---
+
+Happy Learning! 😊
+
