@@ -151,12 +151,12 @@ You can read the helper PDF file to better understand the concepts. Use the quic
 
 There are also other resources you may find helpful for better understanding. To understand the complete mathematical concepts behind DDPM, I suggest reading the article "Tutorial on Diffusion Models for Imaging and Vision".
 
-## References & Resources
+## 📑 References & Resources
 - [CVPR 2022 Tutorial on Diffusion Models](https://cvpr2022-tutorial-diffusion-models.github.io/)
 - Stanley Chan, "Tutorial on Diffusion Models for Imaging and Vision", 2024.
 - [Denoising Diffusion Probabilistic Models Paper](https://arxiv.org/abs/2006.11239)
 
-## Citations
+## 🌀 Citations
 If you use this repository in your research, please cite it as follows:
 
 ```bibtex
@@ -173,7 +173,7 @@ If you use this repository in your research, please cite it as follows:
   journal={arXiv preprint arXiv:2006.11239},
   year={2020}
 }
-
+```
 ---
 
 ## 📫 Contact
