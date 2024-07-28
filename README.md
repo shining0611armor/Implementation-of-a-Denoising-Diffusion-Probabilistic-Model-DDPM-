@@ -152,14 +152,7 @@ To use this implementation, follow these steps:
     cd Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-
     ```
 
-2. **Install the required packages**:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3. **Run the main script**:
-    ```bash
-    python main.py
-    ```
-
 This will start the training process and generate samples from the diffusion model.
+
+
+You can read the helper PDF file to better understand the concepts. Use the quick start on Google Colab and change the runtime to a T4 GPU resource.
