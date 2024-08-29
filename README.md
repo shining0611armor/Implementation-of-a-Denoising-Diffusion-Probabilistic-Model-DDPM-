@@ -2,7 +2,7 @@
 
 ![A simple Implementing of denoising diffusion model](https://github.com/shining0611armor/Implementation-of-a-Denoising-Diffusion-Probabilistic-Model-DDPM-/raw/main/images/poster.PNG)
 
- 
+  
 ## Quick Access in Colab
 
 You can quickly access and run this project in Google Colab by clicking the following icon:
